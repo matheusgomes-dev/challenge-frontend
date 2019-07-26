@@ -1,0 +1,147 @@
+body {
+    background-color: #2fbfa0 !important;
+  }
+  
+  button {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .card {
+    min-width: 420px !important;
+    max-width: 420px !important;
+    height: 500px !important;
+    border-radius: 10px !important;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-logo {
+    padding-left: 20px;
+    padding-top: 20px;
+  }
+  
+  .card-body {
+    padding: 60px 30px !important;
+  }
+  
+  .btn-login {
+    background-color: #ffffff !important;
+    border-color: #cacaca !important;
+    color: #cacaca !important;
+    padding: 20px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 2rem;
+    font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", sans-serif;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
+  .btn-login:hover {
+    background-color: #2fbfa0 !important;
+    border-color: #29a78c !important;
+    color: #fff !important;
+  }
+  
+  .btn-login:disabled {
+    background-color: #FFF !important;
+    border-color: #cacaca !important;
+    color: #2fbfa0 !important;
+  }
+  
+  #div-inputs input {
+    border: none !important;
+    outline: none !important;
+  }
+  
+  #div-inputs input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
+  input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
+  .input-group-text {
+    border: none !important;
+    background-color: #fff !important;
+    color: #2fbfa0 !important;
+    font-size: 14px !important;
+  }
+  
+  #title-card {
+    font-family: ff-dax-web-pro, "Helvetica Neue", sans-serif;
+    font-weight: 700;
+    line-height: 1.846;
+    text-align: center;
+    font-size: 16pt;
+    margin-bottom: 2rem !important;
+  }
+  
+  #div-inputs {
+    padding-top: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .button-login {
+    margin-top: 40px;
+  }
+  
+  #btn-esqueceu-senha {
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    color: #2fbfa0;  
+    text-align: center;
+    font-size: .9rem;
+    font-family: "Gotham SSm A","Gotham SSm B","Helvetica Neue",sans-serif;
+    font-weight: 700;
+    transition: color .3s ease; 
+    background-color: transparent;
+    border: none !important;
+  }
+  
+  #btn-esqueceu-senha:active {
+    background-color: transparent !important;
+    border:none !important;
+  }
+  
+  #btn-esqueceu-senha:focus {
+    outline: none;
+    box-shadow: none !important;
+  }
+  
+  #btn-esqueceu-senha:hover {
+    color: black;
+  }
+  
+  .toast-header {
+    background-color: #ffc107;
+    opacity: 0.7;
+    color: #ffffff;
+  }
+  
+  #btnEsqueceuSenha {
+    color: #2fbfa0 !important;
+    border-color: #29a78c !important;
+  }
+  
+  #btnEsqueceuSenha:hover {
+    color: #FFF !important;
+    background-color: #2fbfa0 !important;
+    border-color: #29a78c !important;
+  }
