@@ -10,10 +10,12 @@ import {
 } from "reactstrap";
 import { Form, Input } from "@rocketseat/unform";
 import * as Icons from "react-feather";
-import "./styles.css";
+import './../Login/styles.css';
 /* import { authenticate } from "../../services/login";
 import { Redirect } from "react-router-dom";
 import { logout, isAuthenticated } from "./../../services/auth"; */
+
+import ForgotPassword from "../../components/ForgotPassword/index";
 
 export default class Login extends Component {
   constructor() {
@@ -115,6 +117,10 @@ export default class Login extends Component {
     }
   };
 
+  hideForgotPassword = () => {
+    this.setState({ showModal: false });
+  }
+
   render() {
     /* if (this.state.redirectToHome) {
       return <Redirect to={"/dashboard"} />;
@@ -140,90 +146,94 @@ export default class Login extends Component {
           />
         </div>
 
-        <div className="container">
+        <div className="container-login">
           <div className="card">
-            <article className="card-body">
-              <p id="title-card">Faça seu login</p>
+            {!this.state.showModal ? (
+              <article className="card-body-login">
+                <p id="title-card">Faça seu login</p>
 
-              <div id="div-inputs">
-                <Form onSubmit={this.login}>
-                  <div className="form-group">
-                    <div className="input-group">
-                      <div className="input-group-prepend">
-                        <span className="input-group-text">
-                          {" "}
-                          <Icons.User />{" "}
-                        </span>
-                      </div>
-                      <Input
-                        id="txtEmail"
-                        name="email"
-                        className="form-control"
-                        placeholder="E-mail"
-                        type="email"
-                      />
-                    </div>
-                  </div>
-
-                  <hr />
-
-                  <div className="form-group">
-                    <div className="input-group">
-                      <div className="input-group-prepend">
-                        <span className="input-group-text">
-                          {" "}
-                          <Icons.Lock />{" "}
-                        </span>
-                      </div>
-                      <Input
-                        id="txtSenha"
-                        className="form-control"
-                        placeholder="Senha"
-                        type="password"
-                        name="password"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="form-group button-login">
-                    <Button
-                      type="submit"
-                      className="btn-login"
-                      block={true}
-                      disabled={this.state.buttonDisabled}
-                    >
-                      {this.state.showLoading ? (
-                        <span
-                          className="spinner-border spinner-border-sm"
-                          role="status"
-                          aria-hidden="true"
+                <div id="div-inputs">
+                  <Form onSubmit={this.login}>
+                    <div className="form-group">
+                      <div className="input-group">
+                        <div className="input-group-prepend">
+                          <span className="input-group-text">
+                            {" "}
+                            <Icons.User />{" "}
+                          </span>
+                        </div>
+                        <Input
+                          id="txtEmail"
+                          name="email"
+                          className="form-control"
+                          placeholder="E-mail"
+                          type="email"
                         />
-                      ) : (
-                        <span>CONTINUAR</span>
-                      )}
-                    </Button>
-                  </div>
-                </Form>
-              </div>
+                      </div>
+                    </div>
 
-              <Button
-                type="button"
-                id="btn-esqueceu-senha"
-                onClick={this.openCloseModal}
-              >
-                Esqueci minha senha&nbsp;
-                <Icons.ChevronRight size={14} />
-              </Button>
-            </article>
+                    <hr />
+
+                    <div className="form-group">
+                      <div className="input-group">
+                        <div className="input-group-prepend">
+                          <span className="input-group-text">
+                            {" "}
+                            <Icons.Lock />{" "}
+                          </span>
+                        </div>
+                        <Input
+                          id="txtSenha"
+                          className="form-control"
+                          placeholder="Senha"
+                          type="password"
+                          name="password"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="form-group button-login">
+                      <Button
+                        type="submit"
+                        className="btn-login"
+                        block={true}
+                        disabled={this.state.buttonDisabled}
+                      >
+                        {this.state.showLoading ? (
+                          <span
+                            className="spinner-border spinner-border-sm"
+                            role="status"
+                            aria-hidden="true"
+                          />
+                        ) : (
+                          <span>CONTINUAR</span>
+                        )}
+                      </Button>
+                    </div>
+                  </Form>
+                </div>
+
+                <Button
+                  type="button"
+                  id="btn-esqueceu-senha"
+                  onClick={this.openCloseModal}
+                >
+                  Esqueci minha senha&nbsp;
+                  <Icons.ChevronRight size={14} />
+                </Button>
+              </article>
+            ) : (
+              <ForgotPassword backToLogin={this.hideForgotPassword} />
+            )}
           </div>
         </div>
 
-        <Modal isOpen={this.state.showModal} toggle={this.openCloseModal}>
+        <Modal isOpen={false}>
           <ModalHeader toggle={this.openCloseModal}>
             Esqueci minha senha
           </ModalHeader>
           <ModalBody>
-            <Form onSubmit={this.forgotPassword} id="form-esqueceu-senha">
+            <Form onSubmit={this.forgotPassword}>
               <p>
                 Esqueceu sua senha, né? Não tem problema. Nós vamos gerar uma
                 nova senha para você, basta informar seu e-mail.

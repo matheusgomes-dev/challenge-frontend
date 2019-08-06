@@ -1,0 +1,101 @@
+#form-esqueceu-senha {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", sans-serif;
+    text-align: center;
+    padding-left: 4rem !important;
+    padding-right: 4rem !important;
+}
+
+.titulo {
+    text-align: center;
+    font-weight: 700;
+    font-size: 16pt;
+}
+
+.sub-titulo {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 12pt;
+    font-weight: 400;
+    line-height: 1.846;
+    cursor: auto;
+    outline: 0;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    box-sizing: border-box;
+    letter-spacing: 0.5px;
+}
+
+.email-forget-pwd {
+    margin-top: 4rem;
+    flex: 1;
+    width: 100%;
+    border: none !important;
+    border-bottom: 1px solid #cacaca !important;
+}
+
+.btn-forget-pwd {
+    margin: 5.3rem auto 0; 
+    background-color: #ffffff !important;
+    border-color: #cacaca !important;
+    color: #cacaca !important;
+    padding: 17px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 2rem;
+    font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", sans-serif;
+    outline: none !important;
+    box-shadow: none !important;
+    display: block;
+}
+
+.load-component-appear {
+    opacity: 0;
+}
+.load-component-appear.load-component-appear-active {
+    opacity: 1;
+    transition: all 0.6s linear;
+}
+.load-component-enter {
+    opacity: 0;
+}
+.load-component-enter.load-component-enter-active {
+    opacity: 1;
+    /* transition: all 0.6s linear 0.4s; */
+}
+.load-component-leave {
+    opacity: 1;
+    position: absolute
+}
+.load-component-leave.load-component-leave-active {
+    opacity: 0;
+    transition: all 0.6s linear;
+    position:absolute;
+}
+
+.destroy-component-appear {
+    opacity: 0;
+}
+
+.destroy-component-appear.destroy-component-appear-active {
+    opacity: 1;
+    transition: all 0.6s linear;
+}
+.destroy-component-enter {
+    opacity: 0;
+}
+.destroy-component-enter.destroy-component-enter-active {
+    opacity: 1;
+    transition: all 0.2s linear 0.4s;
+}
+.destroy-component-leave {
+    opacity: 1.0;
+    position:absolute
+}
+.destroy-component-leave.destroy-component-leave-active {
+    opacity: 0;
+    transition: all 0.2s linear;
+    position:absolute
+}

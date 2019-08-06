@@ -1,0 +1,43 @@
+.bg-main {
+  background-color: #f9fbfd !important;
+}
+
+body {
+  background-color: #f9fbfd !important;
+  font-family: Cerebri Sans, sans-serif !important;
+}
+
+.table {
+  border-color: grey;
+}
+
+.table thead {
+  font-size: 0.8125rem;
+  background: #f9fbfd;
+}
+
+.card-body .table thead th {
+  border-top: 1px solid #dee2e6;
+  border-bottom: 1px solid #dee2e6 !important;
+  color: #95aac9 !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  font-size: 0.625rem !important;
+}
+
+.card-body .table thead th:not(:first-child) {
+    padding: 0.6rem !important;
+}
+
+.card-body .table thead th:first-child {
+    padding: 0.6rem 0.6rem 0.6rem 1.5rem !important;
+}
+
+.card-body .table tbody td:not(:first-child) {
+    padding: 0.6rem !important;
+}
+
+.card-body .table tbody td:first-child {
+    padding: 0.6rem 0.6rem 0.6rem 1.5rem !important;
+}

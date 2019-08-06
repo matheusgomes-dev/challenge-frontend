@@ -1,0 +1,24 @@
+.card-tools {
+    box-shadow: 0 0.75rem 1.5rem rgba(18,38,63,.03) !important;
+    margin-top: 3rem !important;
+    border-radius: 6px !important;
+    max-width: unset !important;
+    height: unset !important;
+    min-width: unset !important
+}
+
+.no-padding-horizontal {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.title-card {
+    margin-left: 1.5rem;
+    font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", sans-serif;
+    font-weight: 550;
+    font-size: 25pt;
+}
+
+.side-block {
+    display: inline-block;
+}

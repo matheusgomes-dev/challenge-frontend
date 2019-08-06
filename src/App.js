@@ -1,10 +1,12 @@
 import React from 'react';
-import Login from '../src/pages/Login';
+import Routes from './routes';
+
+import './assets/css/main.css'
 
 function App() {
   return (
-    <div>
-      <Login />
+    <div className="bg-main">
+      <Routes />
     </div>
   );
 }
